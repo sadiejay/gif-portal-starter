@@ -14,8 +14,6 @@ const TEST_GIFS = [
   // 3 ^
 	'https://media.giphy.com/media/3o6gEdCJ0CgzXCW5Jm/giphy.gif',
   // 4 ^
-	'https://media.giphy.com/media/3o6gEdCJ0CgzXCW5Jm/giphy.gif',
-  // 4 ^
 	'https://media.giphy.com/media/UeHnshOcQMt6WufxXH/giphy.gif',
   // 5 ^
 	'https://media.giphy.com/media/3ohhwmSDJmpHNCZi8M/giphy.gif',
@@ -129,7 +127,9 @@ const [walletAddress, setWalletAddress] = useState(null);
             View your GIF collection in the metaverse ✨
           </p>
           {/* Add the condition to show this only if we don't have a wallet address */}
-{!walletAddress && renderNotConnectedContainer()}
+          {!walletAddress && renderNotConnectedContainer()}
+          {/* We just need to add the inverse here! */}
+          {walletAddress && renderConnectedContainer()}
         </div>
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
