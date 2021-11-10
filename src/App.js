@@ -78,7 +78,8 @@ const [walletAddress, setWalletAddress] = useState(null);
 
   return (
     <div className="App">
-      <div className="container">
+      {/* This was solely added for some styling fanciness */}
+			<div className={walletAddress ? 'authed-container' : 'container'}>
         <div className="header-container">
           <p className="header">🖼 GIF Portal</p>
           <p className="sub-text">
