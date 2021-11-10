@@ -1,7 +1,7 @@
 /*
  * We are going to be using the useEffect hook!
  */
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
 
