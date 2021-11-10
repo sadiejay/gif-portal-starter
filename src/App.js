@@ -37,6 +37,7 @@ const App = () => {
    */
   // State
 const [walletAddress, setWalletAddress] = useState(null);
+const [inputValue, setInputValue] = useState('');
   const checkIfWalletIsConnected = async () => {
     try {
       const { solana } = window;
@@ -79,6 +80,11 @@ const [walletAddress, setWalletAddress] = useState(null);
   }
  };
 
+ const onInputChange = (event) => {
+  const { value } = event.target;
+  setInputValue(value);
+};
+
  /*
   * We want to render this UI when the user hasn't connected
   * their wallet to our app yet.
@@ -100,7 +106,8 @@ const [walletAddress, setWalletAddress] = useState(null);
         event.preventDefault();
       }}
     >
-      <input type="text" placeholder="Enter gif link" />
+       <input type="text" placeholder="Enter gif link" value={inputValue}
+         onChange={onInputChange} />
       <button type="submit" className="cta-button submit-gif-button">Submit</button>
     </form>
     <div className="gif-grid">
