@@ -145,6 +145,17 @@ const sendGif = async () => {
     return () => window.removeEventListener('load', onLoad);
   }, []);
 
+  useEffect(() => {
+    if (walletAddress) {
+      console.log('Fetching GIF list...');
+      
+      // Call Solana program here.
+  
+      // Set state
+      setGifList(TEST_GIFS);
+    }
+  }, [walletAddress]);
+
   return (
     <div className="App">
       {/* This was solely added for some styling fanciness */}
