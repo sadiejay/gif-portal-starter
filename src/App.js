@@ -80,6 +80,15 @@ const [inputValue, setInputValue] = useState('');
   }
  };
 
+// check input for gif link
+const sendGif = async () => {
+  if (inputValue.length > 0) {
+    console.log('Gif link:', inputValue);
+  } else {
+    console.log('Empty input. Try again.');
+  }
+};
+
  const onInputChange = (event) => {
   const { value } = event.target;
   setInputValue(value);
@@ -104,6 +113,7 @@ const [inputValue, setInputValue] = useState('');
     <form
       onSubmit={(event) => {
         event.preventDefault();
+        sendGif();
       }}
     >
        <input type="text" placeholder="Enter gif link" value={inputValue}
