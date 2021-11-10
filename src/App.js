@@ -5,6 +5,29 @@ import { useEffect, useState } from 'react';
 import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
 
+const TEST_GIFS = [
+	'https://media.giphy.com/media/LmgHHxtKgDsYrVsEOw/giphy.gif',
+//  1 ^
+	'https://media.giphy.com/media/9vzM2O7lztv8I/giphy.gif',
+  // 2 ^
+	'https://media.giphy.com/media/Xf1lDlqOn3IPBIkEt6/giphy.gif',
+  // 3 ^
+	'https://media.giphy.com/media/3o6gEdCJ0CgzXCW5Jm/giphy.gif',
+  // 4 ^
+	'https://media.giphy.com/media/3o6gEdCJ0CgzXCW5Jm/giphy.gif',
+  // 4 ^
+	'https://media.giphy.com/media/UeHnshOcQMt6WufxXH/giphy.gif',
+  // 5 ^
+	'https://media.giphy.com/media/3ohhwmSDJmpHNCZi8M/giphy.gif',
+  // 6 ^
+	'https://media.giphy.com/media/rxqopnaoWnK13QysTs/giphy.gif',
+  // 7 ^
+	'https://media.giphy.com/media/bBCVc2YBqdE195F4mQ/giphy.gif',
+  // 8 ^
+	'https://media.giphy.com/media/l0CLSUN68nmpp0Sju/giphy.gif',
+  // 9 ^
+]
+
 // Change this up to be your Twitter if you want.
 const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
@@ -89,7 +112,7 @@ const [walletAddress, setWalletAddress] = useState(null);
       {/* This was solely added for some styling fanciness */}
 			<div className={walletAddress ? 'authed-container' : 'container'}>
         <div className="header-container">
-          <p className="header">🖼 GIF Portal</p>
+          <p className="header">Art Imitates Life: Black Cat Edition 🐈‍⬛</p>
           <p className="sub-text">
             View your GIF collection in the metaverse ✨
           </p>
