@@ -38,7 +38,26 @@ const App = () => {
       console.error(error);
     }
   };
+ /*
+   * Let's define this method so our code doesn't break.
+   * We will write the logic for this next!
+   */
+ const connectWallet = async () => {};
 
+ /*
+  * We want to render this UI when the user hasn't connected
+  * their wallet to our app yet.
+  */
+ const renderNotConnectedContainer = () => (
+   <button
+     className="cta-button connect-wallet-button"
+     onClick={connectWallet}
+   >
+     Connect to Wallet
+   </button>
+ );
+
+ // UseEffects
   /*
    * When our component first mounts, let's check to see if we have a connected
    * Phantom Wallet
