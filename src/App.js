@@ -14,6 +14,8 @@ const App = () => {
    * This function holds the logic for deciding if a Phantom Wallet is
    * connected or not
    */
+  // State
+const [walletAddress, setWalletAddress] = useState(null);
   const checkIfWalletIsConnected = async () => {
     try {
       const { solana } = window;
